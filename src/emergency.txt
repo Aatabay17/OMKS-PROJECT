@@ -1,0 +1,19 @@
+{/* <button className="btn" onClick={() => {setActive('auth')}}>Login</button>
+              <button className="btn btn-sign-up"  onClick={() => {setActive('registration')}}>Sign Up</button> */}
+                        {/* {MyTemplate(active)} */}
+                          // <Route path='/dashboard' render={(props) => (<Dashboard {...props} isAuthed={true} />)}/>
+
+  // function MyTemplate(active:string) {
+    // switch (active) {
+    //   case 'registration':
+    //     return (<Registration initialUsers = {users} onChange = {handleChange} activeChange = {handleActive} />);
+    //   case 'auth':
+    //     return (<Auth initialUsers = {users} activeChange = {handleActive} activeUserChange = {handleActiveUser}/>);
+    //   case 'welcome':
+    //     return (<Welcome activeUser = {activeUser}/>);
+    //   default:
+    //     return (<div></div>);
+    // }
+    /* <Route path='/' exact component={}/> */
+
+  // }

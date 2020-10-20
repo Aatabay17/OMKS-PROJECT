@@ -1,0 +1,17 @@
+.header-block{
+    display: flex;
+    align-items: center;
+    background-color: rgb(37, 36, 36);
+    /* color: rgb(30,144,255); */
+  }
+  .header-block-title{
+    margin-left: 3%;
+    color: aliceblue;
+  
+  }
+  .header-block-title .omks{
+    font-family: 'Amatic SC', cursive;
+  }
+  .header-block-btn{
+    margin-left: 65%;
+  }

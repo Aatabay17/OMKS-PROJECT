@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+.welcome-title{
+    margin-top: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-family: 'Righteous', cursive;
+    font-size: 60px;
+}
+.welcome-description{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  font-family: 'Righteous', cursive;
+  font-size: 30px;
+}
+.welcome-btn{
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wlcm-btn{
+  width: 100px;
+  /* height: 80px; */
+}
