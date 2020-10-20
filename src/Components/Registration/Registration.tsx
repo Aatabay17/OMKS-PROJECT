@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
-import { Route, useHistory } from 'react-router-dom';
-import {User} from '../../App';
-import './Registration.css';
+import { Route, useHistory } from 'react-router-dom'
+import {User} from '../../App'
+import './Registration.css'
 
 
 interface Props {
@@ -14,6 +14,8 @@ export default function Registration({initialUsers, onChange,activeChange}: Prop
     const newUser = {
         name: '',
         surname: '',
+        faculty: '',
+        course: '',
         email: '',
         password: ''
     };
@@ -76,6 +78,8 @@ export default function Registration({initialUsers, onChange,activeChange}: Prop
                 <div className = "registration-input-label-block">
                     <input type = "text" placeholder = "Name" onChange = {e => { newUser.name = e.target.value}} required/>
                     <input type = "text" placeholder = "Surname" onChange = {e => { newUser.surname = e.target.value}} required/>
+                    <input type = "text" placeholder = "Faculty" onChange = {e => { newUser.faculty = e.target.value}} required/>
+                    <input type = "text" placeholder = "Course" onChange = {e => { newUser.course = e.target.value}} required/>
                     <input type = "text" placeholder = "Email" onChange = {e => { newUser.email = e.target.value}} required/>
                     <input type = "text" placeholder = "Password" onChange = {e => { newUser.password = e.target.value}} required/>
                 </div>

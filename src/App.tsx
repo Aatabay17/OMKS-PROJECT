@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Auth from './Components/Auth/Auth';
 import Header from './Components/Header/Header';
+import Profile from './Components/Profile/Profile';
 import Registration from './Components/Registration/Registration';
 import Welcome from './Components/Welcome/Welcome';
 
@@ -10,6 +11,8 @@ import Welcome from './Components/Welcome/Welcome';
 export interface User {
   name: string,
   surname: string,
+  faculty: string,
+  course: string,
   email: string,
   password: string
 };
@@ -18,8 +21,10 @@ const arrayOfUsers: User[] = [
  {
   name: 'Alim',
   surname: 'Atabay',
-  email: 'alim.atabay117@gmail.com',
-  password: '12345',
+  faculty: 'FIT',
+  course: '3',
+  email: 'a@',
+  password: '1',
  }
 ];
 
@@ -29,6 +34,8 @@ function App() {
   const [activeUser, setActiveUser] = useState({
     name: '',
     surname: '',
+    faculty: '',
+    course: '',
     email: '',
     password: ''
   });
@@ -53,7 +60,9 @@ function App() {
           <Switch>
             <Route path='/registration' exact render={(props) => (<Registration {...props} initialUsers = {users} onChange = {handleChange} activeChange = {handleActive} />)}/>
             <Route path='/auth' render={(props) => (<Auth {...props} initialUsers = {users} activeChange = {handleActive} activeUserChange = {handleActiveUser} /> )} />
-            <Route path='/Welcome' render={(props) => (<Welcome {...props} activeUser = {activeUser} /> )} />
+            <Route path='/welcome' render={(props) => (<Welcome {...props} activeUser = {activeUser} /> )} />
+            <Route path='/profile' render={(props) => (<Profile {...props} activeUser = {activeUser} /> )} />
+
           </Switch>
         </div>
       </div>
