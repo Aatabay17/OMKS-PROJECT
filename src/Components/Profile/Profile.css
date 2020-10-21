@@ -1,49 +1,95 @@
-.profile-block{
-    margin-top: 10px;
-    width: 49em;
-    height: 380px;
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Cinzel:wght@600&display=swap');
+.main-profile-block{
+    padding-left: 15%;
+    padding-bottom: 20%;
+    height: 100%;
+    width: 95em;
+    /* width: 100%; */
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../Images/welcome-background5.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.left-right-profile-blocks{
+    display: flex;
+    flex-direction: row;
+}
+.left-profile-block, .right-profile-block{
+    margin-top: 20px;
     background-color: rgb(253, 253, 253);
     border-radius: 10%;
 }
+.left-profile-block{
+    width: 33em;
+    height: 400px;
+}
+.right-profile-block{
+    margin-left: 7%;
+    width: 22em;
+    height: 160px;
+}
 .profile-title{
-    font-size: 40px;
+    font-family: 'Alegreya', serif;
+    font-size: 35px;
     display: flex;
     justify-content: center;
-    font-weight: 800;
+    font-weight: 700;
+    margin-top: 15px;
 }
-.profile-info{
+.profile-info, .profile-info-rows{
     display: flex;
     flex-direction: row;
-    
 }
-.forth-collumn img{
+.profile-info-rows{
+    margin-top: 30px;
+    justify-content: center;
+}
+.avatar-collumn img{
     width: 200px;
     height: 200px;
     margin-left: 4em;
     margin-top: 40px;
 }
-.left-collumn{
+.left-collumn, .right-collumn{
     display: flex;
     flex-direction: column;
-    margin-left: 8%;
 }
-.middle-collumn{
-    display: flex;
-    flex-direction: column;
+.left-collumn{
     margin-left: 8%;
 }
 .right-collumn{
-    display: flex;
-    flex-direction: column;
-    margin-left: 8%;
+    margin-left: 2%;
+}
+.first-row, .second-row, .third-row{
+    text-align: center;
+}
+.first-row{
+    margin-right: 30px;
+}
+.third-row{
+    margin-left: 30px;
 }
 .profile-property{
     font-weight: 500;
     margin-top: 40px;
-    /* margin-left: 13%; */
+    margin-left: 2%;
     color: rgb(88, 88, 88);
 }
 .profile-answer{
     color: rgb(3, 3, 3);
     font-weight: 700;
+}
+.down-block{
+    margin-top: 15px;
+    /* margin-left: 15%; */
+    display: flex;
+    width: 61em;
+    height: 100%;
+    background-color: white;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.my-stories-block p{
+    white-space: pre-line;
 }

@@ -1,0 +1,19 @@
+.footer-block{
+    display: flex;
+    align-items: center;
+    background-color: rgb(37, 36, 36);
+    /* color: rgb(30,144,255); */
+  }
+  .footer-block-title{
+    margin-left: 3%;
+    color: aliceblue;
+  
+  }
+  .footer-block-title .omks{
+    font-family: 'Amatic SC', cursive;
+  }
+  .footer-block-btn{
+    margin-left: 65%;
+    display: flex;
+    flex-direction: row;
+  }

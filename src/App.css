@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@600&display=swap');
 
 .welcome-auth-registration-block{
-  height: 46em;
+  height: 50em;
   width: 95em;
   background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./Images/welcome-background5.jpg');
   background-repeat: no-repeat;

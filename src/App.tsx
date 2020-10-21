@@ -6,7 +6,7 @@ import Header from './Components/Header/Header';
 import Profile from './Components/Profile/Profile';
 import Registration from './Components/Registration/Registration';
 import Welcome from './Components/Welcome/Welcome';
-
+import Footer from './Components/Footer/Footer';
 
 export interface User {
   name: string,
@@ -54,18 +54,18 @@ function App() {
 
   return (
     <Router>
-      <div className = "welcome-auth-registration-block">
         <Header/>
-        <div className = 'main-block'>
+        <div className = "welcome-auth-registration-block">
+          <div className = 'main-block'>
           <Switch>
             <Route path='/registration' exact render={(props) => (<Registration {...props} initialUsers = {users} onChange = {handleChange} activeChange = {handleActive} />)}/>
             <Route path='/auth' render={(props) => (<Auth {...props} initialUsers = {users} activeChange = {handleActive} activeUserChange = {handleActiveUser} /> )} />
             <Route path='/welcome' render={(props) => (<Welcome {...props} activeUser = {activeUser} /> )} />
             <Route path='/profile' render={(props) => (<Profile {...props} activeUser = {activeUser} /> )} />
-
           </Switch>
         </div>
-      </div>
+        </div>
+        <Footer/>
     </Router>
   );
 }
