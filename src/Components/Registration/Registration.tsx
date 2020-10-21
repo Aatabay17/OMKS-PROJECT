@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import { Route, useHistory } from 'react-router-dom'
-import {User} from '../../App'
+import { User } from '../../types'
 import './Registration.css'
 
 
@@ -12,7 +12,6 @@ interface Props {
 
 export default function Registration({initialUsers, onChange,activeChange}: Props): ReactElement {
     const newUser = {
-        id: 0,
         name: '',
         surname: '',
         faculty: '',
@@ -66,12 +65,12 @@ export default function Registration({initialUsers, onChange,activeChange}: Prop
 
     const handleSubmit = () => {
         if(validateUser(newUser) === false ){
-            newUser.id = initialUsers.length + 1
+            
             handleActive('auth');
             handleChange(newUser);
             let path = '/auth'; 
             history.push(path);
-            console.log(newUser.id)
+
         }
     }
     return (

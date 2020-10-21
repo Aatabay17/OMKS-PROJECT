@@ -1,7 +1,6 @@
-import userEvent from '@testing-library/user-event'
 import React, { ReactElement } from 'react'
 import { Route, useHistory } from 'react-router-dom';
-import {User} from '../../App'
+import { User } from '../../types'
 import './Auth.css';
 
 interface Props {

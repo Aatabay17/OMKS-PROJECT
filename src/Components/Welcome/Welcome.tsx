@@ -1,9 +1,7 @@
-import { act } from '@testing-library/react';
 import React, { ReactElement } from 'react'
 import { Link } from 'react-router-dom';
-import {User} from '../../App'
+import { User } from '../../types'
 import './Welcome.css';
-
 
 interface Props {
     activeUser: User
