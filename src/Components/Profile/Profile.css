@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@500&family=Cinzel:wght@600&display=swap');
 .main-profile-block{
     padding-left: 15%;
-    padding-bottom: 20%;
+    padding-bottom: 3%;
     height: 100%;
     width: 95em;
-    /* width: 100%; */
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../Images/welcome-background5.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../Images/profile-background.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; 
 }
 .left-right-profile-blocks{
     display: flex;
@@ -45,6 +44,7 @@
     justify-content: center;
 }
 .avatar-collumn img{
+    border-radius: 5%;
     width: 200px;
     height: 200px;
     margin-left: 4em;
@@ -80,7 +80,7 @@
     font-weight: 700;
 }
 .down-block{
-    margin-top: 15px;
+    margin-top: 73px;
     /* margin-left: 15%; */
     display: flex;
     width: 61em;
@@ -90,6 +90,9 @@
     display: flex;
     flex-direction: column;
 }
-.my-stories-block p{
-    white-space: pre-line;
+.down-block span{
+    margin-top: 7%;
+}
+.my-stories-block {
+    margin-top: 7%;
 }

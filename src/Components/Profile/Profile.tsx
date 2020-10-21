@@ -54,7 +54,7 @@ export default function Profile({activeUser}: Props): ReactElement {
             <div className = "down-block">
                 <span className = 'profile-title'>My stories</span>
                 <div className = 'my-stories-block'>
-                
+
                 </div>
             </div>
         </div>

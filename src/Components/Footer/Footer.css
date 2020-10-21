@@ -12,8 +12,14 @@
   .footer-block-title .omks{
     font-family: 'Amatic SC', cursive;
   }
-  .footer-block-btn{
-    margin-left: 65%;
+  .footer-block-link{
+    margin-left: 29%;
     display: flex;
     flex-direction: row;
+  }
+  .footer-links{
+    margin-left: 4em;
+    list-style-type: none;
+    color: aliceblue;
+    font-weight: 700;
   }

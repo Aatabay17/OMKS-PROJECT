@@ -7,6 +7,7 @@ import Profile from './Components/Profile/Profile';
 import Registration from './Components/Registration/Registration';
 import Welcome from './Components/Welcome/Welcome';
 import Footer from './Components/Footer/Footer';
+import FAQ from './Components/FAQ/FAQ';
 
 export interface User {
   name: string,
@@ -62,6 +63,7 @@ function App() {
             <Route path='/auth' render={(props) => (<Auth {...props} initialUsers = {users} activeChange = {handleActive} activeUserChange = {handleActiveUser} /> )} />
             <Route path='/welcome' render={(props) => (<Welcome {...props} activeUser = {activeUser} /> )} />
             <Route path='/profile' render={(props) => (<Profile {...props} activeUser = {activeUser} /> )} />
+            <Route path='/faq' component = {FAQ} />
           </Switch>
         </div>
         </div>
