@@ -12,10 +12,10 @@ export default function Footer({}: Props): ReactElement {
               <h1 className = "omks">OMKS</h1>
             </div>
             <div className = "footer-block-link">
-              <Link to="/profile">
+              <Link to="/about">
                 <li className = 'footer-links'>About us</li> 
               </Link>
-              <Link to="/profile">
+              <Link to="/contacts">
                 <li className = 'footer-links'>Contacts</li> 
               </Link>
               <Link to="/FAQ">

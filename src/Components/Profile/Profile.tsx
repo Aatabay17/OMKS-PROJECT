@@ -1,37 +1,13 @@
 import React, { ReactElement } from 'react'
-import { Story, User } from '../../App'
+import { User } from '../../App'
 import './Profile.css'
 import avatar from '../../Images/avatar.jpg'
 
 interface Props {
-    activeUser: User,
-    initialStories: Story[]
+    activeUser: User
 };
 
-export default function Profile({activeUser, initialStories}: Props): ReactElement {
-    const personalStories = (story: Story) => {
-        if(story.idcheck === activeUser.id){
-            return true;
-        }
-    }
-
-    const res = initialStories.filter(story => personalStories(story));
-    let cnt = 0;
-    let cnt1 = 0;
-    let cntlikes = res.map((story) => cnt + story.numberoflikes);
-    let cntcomments = res.map((story) => cnt1 + story.numberofcomments);
-    // res.forEach(cntlikes);
-
-    // function cntlikes(story : Story) {
-    //   cnt += story.numberoflikes;
-    //   return cnt;
-    // }
-    // res.forEach(cntcomments);
-
-    // function cntcomments(story : Story) {
-    //   cnt1 += story.numberofcomments;
-    //   return cnt1;
-    // }
+export default function Profile({activeUser}: Props): ReactElement {
     return (
         <div className = 'main-profile-block'>
             <div className = 'left-right-profile-blocks'>
@@ -62,15 +38,15 @@ export default function Profile({activeUser, initialStories}: Props): ReactEleme
                     <div className = 'profile-info-rows'>
                         <div className = 'first-row'>
                             <span className = 'profile-property'>Likes: </span>
-                            <span className = 'profile-property'>{cntlikes}</span>
+                            <span className = 'profile-property'> 0 </span>
                         </div>
                         <div className = 'second-row'>
                             <span className = 'profile-property'>Comments: </span>
-                            <span className = 'profile-property'>{cntcomments}</span>
+                            <span className = 'profile-property'> 0 </span>
                         </div>
                         <div className = 'third-row'>
                             <span className = 'profile-property'>Stories: </span> 
-                            <span className = 'profile-property'> {res.length} </span>
+                            <span className = 'profile-property'> 0 </span>
                         </div> 
                     </div>
                 </div>
@@ -78,17 +54,7 @@ export default function Profile({activeUser, initialStories}: Props): ReactEleme
             <div className = "down-block">
                 <span className = 'profile-title'>My stories</span>
                 <div className = 'my-stories-block'>
-                    <div className = 'list-of-stories'> 
-                    {res.map((story, index) => (
-                            <li className="list__item" key={index}>
-                                { story.authorname }
-                                { story.authorsurname }
-                                { story.story }
-                                { story.numberoflikes }
-                                { story.numberofcomments }
-                            </li>
-                    ))}
-                    </div>
+
                 </div>
             </div>
         </div>
