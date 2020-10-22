@@ -1,3 +1,31 @@
-.contacts__heading{
+.contacts__wrapper{
+    width: 83vw;
+    height: 63vh;
+    padding: 25px;
+    border-radius: 5px;
+    margin-top: 30px;
+    background-color: white;
+
+}
+
+h2{
     text-align: center;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contacts_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_info{
+    justify-content: center;
+    background-color: whitesmoke;
+    border: black;
+    box-shadow: 0px 0px 1px 0px rgb(8, 8, 8);
+    padding-bottom: 20px;
 }

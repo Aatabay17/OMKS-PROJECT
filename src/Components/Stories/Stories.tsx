@@ -2,7 +2,7 @@ import React, { FunctionComponent, useRef } from "react";
 import { Story } from "../../types";
 import { stories } from "../../data";
 import "./Stories.css";
-import StoryListItem from "../StoryListItem/StoryListItem";
+import StoryListItem from "../StoryListItem/StoryListItem"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 interface Props {
