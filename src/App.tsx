@@ -12,11 +12,11 @@ import FAQ from './components/FAQ/FAQ';
 import About from './components/About/About';
 import Contacts from './components/Contacts/Contacts';
 import NavBar from './components/NavBar/NavBar';
-import Stories from './components/Stories/Stories'
+import Stories from './pages/Stories/Stories'
+import StoryLanding from './pages/StoryLanding/StoryLanding'
+
 
 function App() {
-  const[showedElement, setShowedElement] = useState(<></>)
-  const [active, setActive] = useState('');
   const [activeUser, setActiveUser] = useState({
     name: '',
     surname: '',
@@ -26,14 +26,6 @@ function App() {
     password: ''
   });
 
-  const handleActive = (newActive: string) => {
-    setActive(newActive);
-  };
-
-  const handleActiveUser = (newUser: User) => {
-    setActiveUser(newUser);
-  }
- 
   return (
     <Router>
         {activeUser.email === ""? <Header /> : <NavBar />}
@@ -54,8 +46,8 @@ function App() {
             <Route path='/welcome' render={(props) => (<Welcome {...props} activeUser = {activeUser} /> )} />
             <Route path='/faq' component = {FAQ} />
             <Route path='/about' component={About} />
-            <Route path='/stories' component = {Stories} />
-
+            <Route exact path='/stories' component={Stories} />
+            <Route path='/stories/:id' component={StoryLanding} />
             <Route path='/contacts' component = {Contacts} />
           </Switch>
         </div>
