@@ -12,10 +12,14 @@ import FAQ from './components/FAQ/FAQ';
 import About from './components/About/About';
 import Contacts from './components/Contacts/Contacts';
 import NavBar from './components/NavBar/NavBar';
-import Stories from './components/Stories/Stories'
+import Stories from './components/Stories/Stories';
+import Profile from './components/Profile/Profile';
+
+
 
 function App() {
   const[showedElement, setShowedElement] = useState(<></>)
+  
   const [active, setActive] = useState('');
   const [activeUser, setActiveUser] = useState({
     name: '',
@@ -36,26 +40,26 @@ function App() {
  
   return (
     <Router>
-        {activeUser.email === ""? <Header /> : <NavBar />}
+        {active === '' ? <Header /> : <NavBar activeChange = {handleActive} />}
         <div className = "welcome-auth-registration-block">
           <div className = 'main-block'>
           <Switch>
             {/* <Route path='/registration' exact render={(props) => (
               <Registration
                 initialUsers={users}
-                activeChange={handleActive} />)} />
+                activeChange={handleActive} />)} />*/}
             <Route path='/auth' render={
               (props) => (
                 <Auth
                   {...props}
                   initialUsers={users}
                   activeChange={handleActive}
-                  activeUserChange={handleActiveUser} />)} /> */}
+                  activeUserChange={handleActiveUser} />)} /> 
             <Route path='/welcome' render={(props) => (<Welcome {...props} activeUser = {activeUser} /> )} />
             <Route path='/faq' component = {FAQ} />
             <Route path='/about' component={About} />
             <Route path='/stories' component = {Stories} />
-
+            <Route path='/profile' render={(props) => (<Profile {...props} activeUser = {activeUser} /> )} />
             <Route path='/contacts' component = {Contacts} />
           </Switch>
         </div>

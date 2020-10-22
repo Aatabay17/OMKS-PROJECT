@@ -5,8 +5,8 @@ import './Auth.css';
 
 interface Props {
     initialUsers: User[],
-    activeChange : (newUser: string) => void;
-    activeUserChange : (newActive: User) => void;
+    activeChange : (newActive: string) => void;
+    activeUserChange : (newUser: User) => void;
 }
 
 export default function Auth({initialUsers,activeChange, activeUserChange}: Props): ReactElement {
@@ -15,10 +15,18 @@ export default function Auth({initialUsers,activeChange, activeUserChange}: Prop
         password: ''
     };
     const history = useHistory();
+
     const handleActive = (newActive: string) => {
         activeChange(newActive);
-        let path = '/'; 
-        history.push(path);
+        if(newActive === ''){
+            let path = '/'; 
+            history.push(path);
+        }
+        if(newActive === 'welcome'){
+            let path = '/welcome'; 
+            history.push(path);
+        }
+
     }
 
     const handleActiveUser = (newUser: User) => {
@@ -31,8 +39,6 @@ export default function Auth({initialUsers,activeChange, activeUserChange}: Prop
             if(user.email === newUser.email && user.password === newUser.password){
                 handleActiveUser(user);
                 handleActive('welcome');
-                let path = '/welcome'; 
-                history.push(path);
                 cnt+=1;
             }
         })
