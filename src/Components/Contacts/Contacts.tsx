@@ -22,7 +22,7 @@ export default function Contacts({}: Props): ReactElement {
             </div>
             <div className="contacts_container">
                 <div className="contact_info">
-                    <h2>Modile:  8(789)-454-45-45</h2>
+                    <h2>Mobile:  8(789)-454-45-45</h2>
                 </div>
 
                 <div className="contact_info">
