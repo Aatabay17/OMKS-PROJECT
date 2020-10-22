@@ -4,7 +4,7 @@
     padding-bottom: 3%;
     height: 100%;
     width: 95em;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../Images/profile-background.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../images/profile-background.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 

@@ -16,7 +16,7 @@ export default function Welcome({activeUser}: Props): ReactElement {
                 <Link to="/profile">
                 <button className="btn wlcm-btn">View my profile</button>
                 </Link>
-                <Link to="/feed">
+                <Link to="/stories">
                 <button className="btn wlcm-btn">Read stories</button> 
                 </Link>
             </div>

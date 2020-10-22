@@ -28,8 +28,14 @@ export default function Registration({initialUsers, onChange,activeChange}: Prop
 
     const handleActive = (newActive: string) => {
         activeChange(newActive);
-        let path = '/'; 
-        history.push(path);
+        if(newActive === ''){
+            let path = '/'; 
+            history.push(path);
+        }
+        if(newActive === 'auth'){
+            let path = '/auth'; 
+            history.push(path);
+        }
     }
 
     const validateUser = (user : User) => {
@@ -68,8 +74,6 @@ export default function Registration({initialUsers, onChange,activeChange}: Prop
             
             handleActive('auth');
             handleChange(newUser);
-            let path = '/auth'; 
-            history.push(path);
 
         }
     }

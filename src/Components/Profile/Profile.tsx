@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import { User } from '../../types'
 import './Profile.css'
-import avatar from '../../Images/avatar.jpg'
+import avatar from '../../images/avatar.jpg'
 
 interface Props {
     activeUser: User

@@ -15,8 +15,10 @@ import NavBar from './components/NavBar/NavBar';
 import Stories from './pages/Stories/Stories'
 import StoryLanding from './pages/StoryLanding/StoryLanding'
 
-
 function App() {
+  const [showedElement, setShowedElement] = useState(<></>)
+  
+  const [active, setActive] = useState('');
   const [activeUser, setActiveUser] = useState({
     name: '',
     surname: '',
@@ -28,33 +30,34 @@ function App() {
 
   return (
     <Router>
-        {activeUser.email === ""? <Header /> : <NavBar />}
-        <div className = "welcome-auth-registration-block">
-          <div className = 'main-block'>
+      {active === '' ? <Header /> : <NavBar activeChange={handleActive} />}
+      <div className="welcome-auth-registration-block">
+        <div className='main-block'>
           <Switch>
             {/* <Route path='/registration' exact render={(props) => (
               <Registration
                 initialUsers={users}
-                activeChange={handleActive} />)} />
+                activeChange={handleActive} />)} />*/}
             <Route path='/auth' render={
               (props) => (
                 <Auth
                   {...props}
                   initialUsers={users}
                   activeChange={handleActive}
-                  activeUserChange={handleActiveUser} />)} /> */}
-            <Route path='/welcome' render={(props) => (<Welcome {...props} activeUser = {activeUser} /> )} />
-            <Route path='/faq' component = {FAQ} />
+                  activeUserChange={handleActiveUser} />)} />
+            <Route path='/welcome' render={(props) => (<Welcome {...props} activeUser={activeUser} />)} />
+            <Route path='/faq' component={FAQ} />
             <Route path='/about' component={About} />
             <Route exact path='/stories' component={Stories} />
             <Route path='/stories/:id' component={StoryLanding} />
-            <Route path='/contacts' component = {Contacts} />
+            <Route path='/profile' render={(props) => (<Profile {...props} activeUser={activeUser} />)} />
+            <Route path='/contacts' component={Contacts} />
           </Switch>
         </div>
-        </div>
-        <Footer/>
+      </div>
+      <Footer />
     </Router>
-  );
+  )
 }
 
 export default App;
