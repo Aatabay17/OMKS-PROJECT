@@ -45,6 +45,7 @@
 }
 
 .contact_info{    
+    margin-right: 20px;
     transform: translate(0,-28px);
     width: 50%;
     display: flex;
