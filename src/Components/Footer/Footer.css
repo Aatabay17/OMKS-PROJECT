@@ -18,9 +18,10 @@
     flex-direction: row;
   }
   .footer-links{
+    margin-bottom: 18px;
     font-size: 20px;
     font-family: 'Amatic SC', cursive;
-    margin-left: 8.3em;
+    margin-left: 9em;
     list-style-type: none;
     color: aliceblue;
     font-weight: 700;

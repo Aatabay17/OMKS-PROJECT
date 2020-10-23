@@ -48,9 +48,9 @@ export default function NavBar({activeChange}: Props): ReactElement {
                 </Link>
             </div>
             <div className = "nav-block-btn">
-            <Link to="/">
-              <button className="btn" onClick = {handleLogOut} >Log out</button>
-            </Link>
+                <Link to="/">
+                    <button className="btn" onClick = {handleLogOut} >Log out</button>
+                </Link>
             </div>
         </div>    
     )
