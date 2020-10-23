@@ -130,8 +130,9 @@ const arrayOfStories: Story[] = [
 ];
 
 function App() {
+  const [showedElement, setShowedElement] = useState(<></>);
+  const [tempUsers, setUsers] = useState(users);
   const [active, setActive] = useState("");
-  const [users, setUsers] = useState(arrayOfUsers);
   const [activeUser, setActiveUser] = useState({
     id: 0,
     name: "",
@@ -142,9 +143,8 @@ function App() {
     password: "",
   });
   const handleChange = (user: User) => {
-    setUsers([...users, user]);
+    setUsers([...tempUsers, user]);
   };
-
   const handleActive = (newActive: string) => {
     setActive(newActive);
   };
@@ -152,7 +152,6 @@ function App() {
   const handleActiveUser = (newUser: User) => {
     setActiveUser(newUser);
   };
-  const [stories, setStories] = useState(arrayOfStories);
 
   return (
     <Router>
@@ -165,8 +164,8 @@ function App() {
               exact
               render={(props) => (
                 <Registration
-                  initialUsers={users}
                   onChange={handleChange}
+                  initialUsers={users}
                   activeChange={handleActive}
                 />
               )}
