@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { users } from './data'
+import { initialUsers } from './data'
 import { User } from './types'
 import './App.css';
 import Auth from './components/Auth/Auth';
@@ -19,7 +19,7 @@ import Profile from './components/Profile/Profile';
 
 function App() {
   const[showedElement, setShowedElement] = useState(<></>)
-  const [tempUsers, setUsers] = useState(users);
+  const [users, setUsers] = useState(initialUsers);
   const [active, setActive] = useState('');
   const [activeUser, setActiveUser] = useState({
     name: '',
@@ -30,7 +30,7 @@ function App() {
     password: ''
   });
   const handleChange = (user: User) => {
-    setUsers([...tempUsers, user]);
+    setUsers([...users, user]);
   }
   const handleActive = (newActive: string) => {
     setActive(newActive);
