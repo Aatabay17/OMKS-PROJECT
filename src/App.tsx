@@ -19,7 +19,7 @@ import Profile from './components/Profile/Profile';
 
 function App() {
   const[showedElement, setShowedElement] = useState(<></>)
-  
+  const [tempUsers, setUsers] = useState(users);
   const [active, setActive] = useState('');
   const [activeUser, setActiveUser] = useState({
     name: '',
@@ -29,7 +29,9 @@ function App() {
     email: '',
     password: ''
   });
-
+  const handleChange = (user: User) => {
+    setUsers([...tempUsers, user]);
+  }
   const handleActive = (newActive: string) => {
     setActive(newActive);
   };
@@ -44,10 +46,11 @@ function App() {
         <div className = "welcome-auth-registration-block">
           <div className = 'main-block'>
           <Switch>
-            {/* <Route path='/registration' exact render={(props) => (
+            <Route path='/registration' exact render={(props) => (
               <Registration
+                onChange = {handleChange}
                 initialUsers={users}
-                activeChange={handleActive} />)} />*/}
+                activeChange={handleActive} />)} />
             <Route path='/auth' render={
               (props) => (
                 <Auth
