@@ -3,6 +3,7 @@ import { User } from '../../types'
 import './Profile.css'
 import avatar from '../../images/avatar.jpg'
 import Stories from '../../pages/Stories/Stories'
+import { stories } from '../../data'
 
 interface Props {
     activeUser: User
@@ -55,7 +56,7 @@ export default function Profile({activeUser}: Props): ReactElement {
             <div className = "down-block">
                 <span className = 'profile-title'>My stories</span>
                 <div className = 'my-stories-block'>
-                    <Stories />
+                    <Stories stories={stories}/>
                 </div>
             </div>
         </div>
