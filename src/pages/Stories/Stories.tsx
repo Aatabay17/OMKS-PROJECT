@@ -10,29 +10,33 @@ interface Props {
 }
 
 const Stories: FunctionComponent<Props> = () => {
-  
-    const listAnchor = useRef<HTMLDivElement>(document.createElement("div"))
+  const listAnchor = useRef<HTMLDivElement>(document.createElement("div"));
 
-    const scrollToBottom = () => {
-        listAnchor.current.scrollIntoView({ behavior: "smooth", block: 'nearest'});
-    }
+  const scrollToBottom = () => {
+    listAnchor.current.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  };
 
-    return (
-        <div className="stories_container">
-        <div className="stories_header">
-            <div className="stories_title">Истории</div>
-                <div onClick={scrollToBottom}className="stories_anchor_link">
-                    В конец
-                <FontAwesomeIcon icon={faArrowDown} />
-            </div>
+  return (
+    <div className="stories_container">
+      <div className="stories_header">
+        <div className="stories_title">
+          Истории
+          <button className="button create_story_button">
+            Написать историю
+          </button>
         </div>
-        <div className="stories_list">
-            {stories.map((story) => (
-            <StoryListItem key={story.id} story={story} />
-            ))}
-            <div ref={listAnchor} className="stories_anchor" />
+        <div onClick={scrollToBottom} className="stories_anchor_link">
+          В конец
+          <FontAwesomeIcon icon={faArrowDown} />
         </div>
-        </div>
+      </div>
+      <div className="stories_list">
+        {stories.map((story) => (
+          <StoryListItem key={story.id} story={story} />
+        ))}
+        <div ref={listAnchor} className="stories_anchor" />
+      </div>
+    </div>
   );
 };
 

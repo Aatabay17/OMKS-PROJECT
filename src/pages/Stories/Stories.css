@@ -1,5 +1,5 @@
 .stories_container {
-    width: 93vw;
+    width: 990px;
     padding: 25px;
     border-radius: 5px;
     margin-top: 15px;
@@ -15,6 +15,9 @@
     justify-content: space-between;
 }
 
+.create_story_button {
+    margin-left: 20px;
+}
 
 .stories_title {
     font-size: 21px;
