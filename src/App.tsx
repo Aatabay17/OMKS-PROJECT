@@ -73,7 +73,7 @@ function App() {
             />
             <Route path="/faq" component={FAQ} />
             <Route path="/about" component={About} />
-            <Route path="/stories" component={Stories} />
+            <Route path="/stories" exact component={Stories} />
             <Route path="/stories/:id" component={StoryLanding} />
             <Route
               path="/profile"
