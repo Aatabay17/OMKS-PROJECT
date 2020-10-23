@@ -35,7 +35,7 @@ const StoryListItem: FunctionComponent<Props> = ({ story }: Props) => {
           <div className="story_date">{story.publicationDate}</div>
         </div>
         <div className="story_preview">{story.storyPreview}</div>
-        <Link className="story_author" to={`/${story.authorId}`}>
+        <Link className="story_author" to={`/profile/${story.authorId}`}>
           {story.authorName} {story.authorSurname}
         </Link>
       </div>

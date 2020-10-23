@@ -6,7 +6,7 @@ interface Props {
   activeChange: (newActive: string) => void;
 }
 
-export default function NavBar({ activeChange }: Props): ReactElement {
+export default function NavBar({ activeChange }: Props): any {
   const history = useHistory();
 
   const handleActive = (newActive: string) => {
@@ -20,32 +20,33 @@ export default function NavBar({ activeChange }: Props): ReactElement {
       history.push(path);
     }
     return (
-        <div className = 'nav-block'>
-            <div className = "nav-block-title">
-              <h1 className = "omks">One Million KBTU Stories</h1>
-            </div>
-            <div className = 'nav-block-links'>
-                <Link to="/stories">
-                    <li className="link" >Feed</li>
-                </Link>
-                <Link to="/profile">
-                    <li className="link">Profile</li> 
-                </Link>
-                <Link to="/about">
-                    <li className="link">About Us</li> 
-                </Link>
-                <Link to="/contacts">
-                    <li className="link">Contacts</li> 
-                </Link>
-                <Link to="/faq">
-                    <li className="link">FAQ</li> 
-                </Link>
-            </div>
-            <div className = "nav-block-btn">
-                <Link to="/">
-                    <button className="btn" onClick = {handleLogOut} >Log out</button>
-                </Link>
-            </div>
-        </div>    
-    )
+      <div className="nav-block">
+        <div className="nav-block-title">
+          <h1 className="omks">One Million KBTU Stories</h1>
+        </div>
+        <div className="nav-block-links">
+          <Link to="/stories">
+            <li className="link">Feed</li>
+          </Link>
+          <Link to="/profile">
+            <li className="link">Profile</li>
+          </Link>
+          <Link to="/about">
+            <li className="link">About Us</li>
+          </Link>
+          <Link to="/contacts">
+            <li className="link">Contacts</li>
+          </Link>
+          <Link to="/faq">
+            <li className="link">FAQ</li>
+          </Link>
+        </div>
+        <div className="nav-block-btn">
+          <Link to="/">
+            <button className="btn">Log out</button>
+          </Link>
+        </div>
+      </div>
+    );
+  };
 }
