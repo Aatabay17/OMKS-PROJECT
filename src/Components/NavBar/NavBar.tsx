@@ -32,7 +32,7 @@ export default function NavBar({activeChange}: Props): ReactElement {
             </div>
             <div className = 'nav-block-links'>
                 <Link to="/stories">
-                    <li className="link" >Feed</li>
+                    <li className="link" >Stories</li>
                 </Link>
                 <Link to="/profile">
                     <li className="link">Profile</li> 

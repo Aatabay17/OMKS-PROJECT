@@ -24,7 +24,7 @@ export default function Contacts({}: Props): ReactElement {
                     <i className="fas fa-phone-alt fa-3x"></i>    
                     <h3>Talk to Us</h3><br></br>
                     <span>Call us via mobile phone and we will help you</span><br></br>
-                    <a href="#">8(777)-001-01-00</a>
+                    <a href="#" >8(777)-001-01-00</a>
                 </div>
 
                 <div className="contact_info">

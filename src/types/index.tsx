@@ -1,10 +1,10 @@
 export interface User {
-  name: string,
-  surname: string,
-  faculty: string,
-  course: string,
+  name?: string,
+  surname?: string,
+  faculty?: string,
+  course?: string,
   email: string,
-  password: string
+  password: string,
 };
 
 export interface Story {

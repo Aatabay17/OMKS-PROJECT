@@ -26,20 +26,21 @@ li a:hover:not(.active) {
 .nav-block{
     display: flex;
     flex-direction: row;
+
     background-color: rgb(37, 36, 36);
-    /* color: rgb(30,144,255); */
+
 }
   .nav-block-title{
     margin-left: 3%;
     color: aliceblue;
-  
   }
   .nav-block-title .omks{
     font-family: 'Amatic SC', cursive;
   }
   .nav-block-links{
+    margin-top: 25px;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     margin-left: 12%;
   }
   .nav-block-links .link{

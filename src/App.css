@@ -21,6 +21,56 @@
   background-color:  rgb(37, 36, 36);
 }
 
+.button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(18, 93, 163);
+  padding: 5px 12px 7px;
+  color: white;
+  border-radius: 4px;
+  font-family: 'Commissioner', sans-serif;
+}
+
+.button:hover {
+  transition: all 0.1s ease-in-out;
+  background-color: rgb(18, 93, 163, 0.8);
+}
+
+.button_green {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(18, 163, 83);
+  padding: 5px 12px 7px;
+  color: white;
+  border-radius: 4px;
+  font-family: 'Commissioner', sans-serif;
+}
+
+.button_green:hover {
+  transition: all 0.1s ease-in-out;
+  background-color: rgb(18, 163, 83, 0.8);
+}
+
+.input {
+  width: 300px;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 7px;
+  border: 1px solid #dedede;
+  font-family: 'Commissioner', sans-serif;
+  margin-bottom: 15px;
+  height: 15px;
+}
+
+.error_text {
+  font-size: 11px;
+  margin-top: -12px;
+  margin-bottom: 5px;
+  color: rgb(252, 67, 67)
+}
 
 .btn-sign-up{
   color: aliceblue;

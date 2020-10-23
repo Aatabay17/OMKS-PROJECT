@@ -1,0 +1,28 @@
+.comment_input_container {
+    width: 100%;
+}
+
+.comment_input_title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.comment_input {
+    width: 98%;
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 7px;
+    border: 1px solid #dedede;
+    font-family: 'Commissioner', sans-serif;
+    margin-bottom: 10px;
+    height: 70px;
+}
+
+.comment_input::placeholder {
+  font-family: 'Commissioner', sans-serif;
+}
+
+.comment_input_button {
+
+}
